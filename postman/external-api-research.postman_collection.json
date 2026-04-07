@@ -1,0 +1,86 @@
+{
+  "info": {
+    "name": "External Catalog API Research",
+    "_postman_id": "ed8cb25a-4988-44f7-8249-53f2bc6b717f",
+    "description": "Набор запросов к открытому API DummyJSON по тематике товаров и каталога.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET all products",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://dummyjson.com/products",
+          "protocol": "https",
+          "host": ["dummyjson", "com"],
+          "path": ["products"]
+        }
+      }
+    },
+    {
+      "name": "GET categories",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://dummyjson.com/products/categories",
+          "protocol": "https",
+          "host": ["dummyjson", "com"],
+          "path": ["products", "categories"]
+        }
+      }
+    },
+    {
+      "name": "GET product by id",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://dummyjson.com/products/1",
+          "protocol": "https",
+          "host": ["dummyjson", "com"],
+          "path": ["products", "1"]
+        }
+      }
+    },
+    {
+      "name": "Search products",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://dummyjson.com/products/search?q=drill",
+          "protocol": "https",
+          "host": ["dummyjson", "com"],
+          "path": ["products", "search"],
+          "query": [
+            {
+              "key": "q",
+              "value": "drill"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get limited products",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://dummyjson.com/products?limit=5&skip=0",
+          "protocol": "https",
+          "host": ["dummyjson", "com"],
+          "path": ["products"],
+          "query": [
+            {
+              "key": "limit",
+              "value": "5"
+            },
+            {
+              "key": "skip",
+              "value": "0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
